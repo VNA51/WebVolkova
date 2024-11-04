@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Заявка на курс</title>
+    <style>
+        .input-error {
+            border-color:red;
+        }
+        .input-true {
+            border-color:black;
+        }
+    </style>
+    <link href="mystyle.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Форма регистрации</h1>
+    <form action="/reg-data" method="POST">
+        <div class="form-input" id="name-input-container">
+        <label for="fio-input">Введите свое ФИО</label>
+        <input type="text" id="fio-input" placeholder="ФИО" required/>
+        </div>
+        <label for="email-input">Введите свое ФИО</label>
+        <input type="email" id="email-input" placeholder="Email" required/>
+        <label for="phone" >Введите свой номер телефона</label>
+        <input type="number" id="phone" placeholder="+7" required/>
+
+        <label for="event-input">Выберите курс</label>
+        <select id="event-input">
+            <option value="VR/AR">Курс "Виртуальная/дополненная реальность"</option>
+            <option value="Mobile application development">Разработка мобильных приложений</option>
+            <option value="copter operation">Эксплуатация коптеров</option>
+        </select>
+        <button type="submit" value="Submit an application" > Отправить заявку </button>
+    </form>
+</div>
+
+<!--<script type="text/javascript">
+
+    const fioInput  = document.querySelector("#fio-input");
+    const p = document.createElement("p")
+    let inputValue;
+    fioInput.addEventListener("input",()=>{
+        inputValue = fioInput.value
+        console.log(inputValue)
+    })
+    fioInput.addEventListener("blur",()=>{
+       if (!inputValue || inputValue.length <4) {
+           fioInput.className = "input-error"
+           document.querySelector("#name-input-container").append("Введите ФИО полностью", p);
+       }
+   })
+   fioInput.addEventListener("focus",()=>{
+       document.querySelector("#name-input-container").removeChild(p);
+       fioInput.className = "input-true";
+   })
+</script>-->
+
+
+</body>
+</html>
